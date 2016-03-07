@@ -40,3 +40,13 @@ class words:
         self.ans.append(str2);
         self.f_ques.close();
         self.f_ans.close();
+
+    def check(self, str):
+        i = 0;
+        str = str.replace(u"\n", u"");
+        for list in self.ques:
+            if str == list:
+                return i;
+            i += 1;
+        return -1;
+

@@ -43,15 +43,6 @@ def drawtony(sc):
     pygame.display.update();
 
 
-def check(str, w):
-    i = 0;
-    str = str.replace(u"\n", u"");
-    for list in w.ques:
-        if str == list:
-            return i;
-        i += 1;
-    return -1;
-
 def main():
     
     pygame.init();
@@ -68,7 +59,7 @@ def main():
             end(screen);
         if input == u"さようなら":
             end(screen);
-        result = check(input, w);
+        result = w.check(input);
         #print(result);
         if result != -1:
             ny = font.render(w.ans[result] + u"ニー！", True, (255,255,255));
